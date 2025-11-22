@@ -1,48 +1,143 @@
-# Sistema de Adoção de Animais 🐶🐱  
-Projeto desenvolvido para avaliação da disciplina de Programação Orientada a Objetos.
 
----
+# Sistema de Adoção de Animais 🐶🐱
+
+Projeto desenvolvido para avaliação da disciplina de **Programação Orientada a Objetos (POO)**.
+
+----------
 
 ## 📌 Objetivo
-O sistema gerencia animais, adotantes e adoções, aplicando:
-- Encapsulamento e modelo OO  
-- Herança e classes abstratas  
-- Interfaces  
-- Sobrecarga e sobrescrita  
-- Regras de negócio com Exceptions  
-- Persistência dos dados utilizando arquivos CSV  
-- (Opcional) Interface gráfica com Swing
 
----
+O sistema permite gerenciar animais, adotantes e adoções utilizando conceitos fundamentais de POO, como:
+
+-   Encapsulamento
+    
+-   Herança e classes abstratas
+    
+-   Interfaces
+    
+-   Polimorfismo (sobrecarga e sobrescrita)
+    
+-   Exceptions e regras de negócio
+    
+-   Persistência dos dados utilizando arquivos CSV
+    
+-   (Opcional) Interface gráfica com **Java Swing**
+    
+
+----------
 
 ## 📁 Persistência Utilizada
-A persistência foi feita com **arquivos CSV**, armazenados na pasta `/data`.  
-Os repositórios do projeto fazem leitura e escrita automática desses arquivos.
+
+A persistência foi implementada utilizando **arquivos CSV**, localizados na pasta `/data/`.
+
+Os repositórios fazem leitura e escrita automática após cada operação (save, delete ou update).
 
 Arquivos utilizados:
-- `data/animais.csv`
-- `data/adotantes.csv`
-- `data/adocoes.csv`
 
-O sistema inclui:
-- CRUD completo para Animal  
-- CRUD completo para Adotante  
-- Registro de Adoções com regras de negócio  
-- Atualização automática do CSV após cada operação
+-   `data/animais.csv`
+    
+-   `data/adotantes.csv`
+    
+-   `data/adocoes.csv`
+    
 
----
+O sistema possui:
+
+-   CRUD completo para **Animal**
+    
+-   CRUD completo para **Adotante**
+    
+-   Registro de **Adoções** com regras de negócio
+    
+-   Atualização automática dos arquivos CSV
+    
+
+----------
 
 ## 🛠️ Tecnologias Utilizadas
-- **Java 17+**
-- **Swing (GUI)**
-- **CSV para persistência**
-- **Maven** *(se você estiver usando)*
 
----
+-   **Java 17+**
+    
+-   **Swing (GUI)**
+    
+-   **Persistência com CSV**
+    
+-   **(Opcional) Maven**
+    
+
+----------
 
 ## ▶️ Como Executar o Projeto
 
 ### **1. Clonar o repositório**
-```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPO.git
-cd SEU-REPO
+
+Bash
+
+```
+git clone https://github.com/hytaloleaodev/Sistema-Adocao.git
+cd Sistema-Adocao
+
+```
+
+### **2. Compilar**
+
+Caso esteja usando o terminal:
+
+Bash
+
+```
+javac -d bin src/**/*.java
+
+```
+
+### **3. Executar (modo console e GUI)**
+
+#### ✔️ **Para rodar o sistema no modo Console:**
+
+Bash
+
+```
+java -cp bin br.com.ongadocao.Main
+
+```
+
+#### ✔️ **Para rodar apenas a GUI:**
+
+Bash
+
+```
+java -cp bin br.com.ongadocao.gui.MainGui
+
+```
+
+_(A execução pode mudar dependendo da estrutura do seu pacote.)_
+
+----------
+
+## 📂 Estrutura do Projeto (exemplo)
+
+```
+/Sistema-Adocao
+ ├── /src
+ │   ├── br/com/ongadocao/model
+ │   ├── br/com/ongadocao/repository
+ │   ├── br/com/ongadocao/service
+ │   ├── br/com/ongadocao/exception
+ │   ├── br/com/ongadocao/gui
+ │   └── br/com/ongadocao/Main.java
+ │
+ ├── /data
+ │   ├── animais.csv
+ │   ├── adotantes.csv
+ │   └── adocoes.csv
+ │
+ ├── README.md
+ └── .gitignore
+
+```
+
+----------
+
+## 📝 Autor
+
+**Hytalo Leão**
